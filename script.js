@@ -79,7 +79,7 @@ function renderCart() {
     
     if (isNaN(itemPrice)) {
       console.error(`Invalid price for item: ${item.name}, price: ${item.price}`);
-      return; // Skip this item and don't add it to the total
+      return; 
     }
 
     console.log(`Adding item to cart: ${item.name}, price: Php ${itemPrice}`);
@@ -97,8 +97,8 @@ function renderCart() {
   document.getElementById("cart-total").innerText = `${total.toFixed(2)}`;
 
   const orderItems = cart.map(item => ({
-    name: item.name,
-    price: item.price
+    prod_name: item.name,
+    prod_price: item.price
   }));
 
   const custOrderField = document.getElementById("cust_order");
@@ -110,9 +110,6 @@ function renderCart() {
   console.log("Total Price:", total);
   console.log("Order JSON:", custOrderField?.value);
 }
-
-
-
 
 function addToCart(index) {
   const product = products[index];
@@ -131,19 +128,15 @@ function addToCart(index) {
   renderCart();
 }
 
-
 function removeFromCart(index) {
   const removedItem = cart.splice(index, 1)[0];
   console.log(`Removed from cart: ${removedItem.name}`);
   renderCart();
 }
 
-
-
 document.getElementById("checkout-form").addEventListener("submit", function(event) {
   event.preventDefault();
   console.log("Form submitted with data:", this);
-
 
   if (cart.length === 0) {
     alert("Your cart is empty. Please add items to your cart before checking out.");
