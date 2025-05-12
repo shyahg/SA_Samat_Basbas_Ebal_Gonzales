@@ -1,0 +1,101 @@
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+body {
+  font-family: "Cal Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F8EEDF;
+}
+
+header, footer {
+  background-color: #000000;
+  color: #F8EEDF;
+  text-align: center;
+  padding: 1em 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #F8EEDF;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  padding: 1em;
+  gap: 2em;
+}
+
+#product-catalog {
+  flex: 3;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.product {
+  background-color: #E8C999;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid #8E1616;
+  text-align: center;
+  align-content:end;
+}
+
+.product h3 {
+  margin-top: 0;
+}
+
+.category-header {
+	font-size: 1.8em;
+}
+
+button {
+  background-color: #8E1616;
+  color: #F8EEDF;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
+
+button:hover {
+  background-color: #6D2323;
+}
+
+#cart {
+  flex: 1;
+  background-color: #E8C999;
+  border-radius: 10px;
+  padding: 1em;
+  border: 1px solid #8E1616;
+}
+
+#cart-items li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+#checkout-form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 0.5em;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 100%;
+} 
