@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Onigiri Miya</title>
+  <title>Skibidi Slime Shop</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,39 +11,33 @@
 </head>
 <body>
   <header>
-    <h1>Onigiri Miya</h1>
+    <h1>Skibidi Slime Shop</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About the Company</a>
+      <a href="about.html">About Us</a>
     </nav>
   </header>
-
   <main>
     <section id="product-catalog">
-      <h2>Menu</h2>
-      <div id="products" class="product-grid">
-
-      </div>
+      <h2>Our Slimes</h2>
+      <div id="products" class="product-grid"></div>
     </section>
-
     <aside id="cart">
       <h2>Your Cart</h2>
       <ul id="cart-items"></ul>
-      <p>Total: Php <span id="cart-total">0</span></p>
+      <p>Total: <span id="cart-total">Php 0</span></p>
       <form id="checkout-form" method="POST" action="http://47.129.9.35/cs3/checkout.php">
         <input type="text" name="cust_name" placeholder="Your Name" required />
         <input type="email" name="cust_email" placeholder="Your Email" required />
         <input type="text" name="cust_addr" placeholder="Delivery Address" required />
-        <input type="hidden" id="cust_order" name="cust_order" />
+        <input type="hidden" name="cust_order" id="cust_order" />
         <button type="submit">Checkout</button>
       </form>
     </aside>
   </main>
-
   <footer>
-    <p>&copy; 2025 Onigiri Miya Co.</p>
+    <p>&copy; 2025 Slime Shop Co.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
